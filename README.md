@@ -35,7 +35,7 @@ Because of this approach, the actual tournament name and identifier do not matte
 
 Usage
 funkcja(
-    mypath=r"C:/Users/Dominik/Desktop/JLS_online/JLS_pliki25_26",
+    mypath=r"C:/path/to/your/tournament/files",
     start_year=2025,
     end_year=2026,
     start_month=8,
