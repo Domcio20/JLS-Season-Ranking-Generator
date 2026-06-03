@@ -17,8 +17,6 @@ def date_checker(string, start_year, end_year, start_month, end_month):
         end_month = '0'+str(end_month)
 
     if str(start_year)+'.'+str(start_month)+'.'+'01' <= string <= str(end_year)+'.'+str(end_month)+'.'+'31':
-        print(str(start_year)+'.'+str(start_month)+'.'+'01')
-        print(str(end_year)+'.'+str(end_month)+'.'+'31')
         return True
     return False
 
@@ -53,6 +51,7 @@ def funkcja(mypath, start_year, end_year, start_month, end_month, name):
     table['SUMA'] = table.sum(axis=1, numeric_only=True)
     table.sort_values(by='SUMA', ascending=False, inplace=True)
 
-    table.to_excel(f"{name}.xlsx", index=False)
+    excel_path = join(mypath, f"{name}.xlsx")
+    table.to_excel(excel_path, index=False)
 
-funkcja(mypath = "C:/Users/Dominik/Desktop/online2025", start_year = 2025, end_year = 2026, start_month = 8, end_month=2, name="JLS25")
+funkcja(mypath = "", start_year = 2025, end_year = 2026, start_month = 8, end_month=6, name="")
