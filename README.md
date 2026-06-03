@@ -1,14 +1,12 @@
 # JLS-Season-Ranking-Generator
 A Python tool for generating season standings from Lichess tournament exports.
 
-Overview
-
+# Overview
 This program processes tournament result files exported from Lichess in .ndjson format and generates a season ranking table in Excel format.
 
 Players receive points based on their finishing positions in each tournament using the club's official scoring system. The program aggregates points across all selected tournaments, calculates total scores, and produces a sorted leaderboard.
 
-How It Works
-
+# How It Works
 The program scans a directory for .ndjson files.
 It extracts the tournament date from each filename.
 Files are filtered according to a specified date range.
@@ -33,33 +31,43 @@ The program extracts this date directly from the filename and uses it to determi
 
 Because of this approach, the actual tournament name and identifier do not matter. As long as the filename contains a valid date in the expected format, the file can be processed automatically.
 
-Usage
+# Usage
 funkcja(
     mypath=r"C:/path/to/your/tournament/files",
     start_year=2025,
     end_year=2026,
     start_month=8,
     end_month=6,
-    name="JLS26"
+    name="name_for_excel_file"
 )
 
-Parameters
+# Parameters
 Parameter	Description
+
 mypath	Directory containing tournament .ndjson files
+
 start_year	Starting year of the season
+
 end_year	Ending year of the season
+
 start_month	Starting month of the season
+
 end_month	Ending month of the season
+
 name	Name of the generated Excel file
 
-Output
+# Output
 
 The program creates an Excel file in the specified directory containing:
 
 Player names
+
 Points earned in each tournament
+
 Total season points
+
 Final ranking sorted by total points
-Example Use Case
+
+# Example Use Case
 
 A chess club organizer can export tournament results from Lichess after each event and place the .ndjson files into a single folder. Running the script automatically generates an up-to-date leaderboard without any manual calculations.
