@@ -51,6 +51,7 @@ end_year	Ending year of the season
 start_month	Starting month of the season
 end_month	Ending month of the season
 name	Name of the generated Excel file
+
 Output
 
 The program creates an Excel file in the specified directory containing:
